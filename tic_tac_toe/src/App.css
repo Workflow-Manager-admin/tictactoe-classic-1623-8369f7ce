@@ -5,7 +5,6 @@
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
 }
-
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -15,6 +14,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* TicTacToe board styles */
+.tictactoe-board {
+  margin: 0 auto;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  gap: 12px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 16px 0 rgba(34,34,34,0.06);
+}
+
+/* Optional: Accessibility focus effect for board/cell */
+.tictactoe-board button:focus {
+  outline: 2px solid var(--kavia-orange);
+}
+
+/* Subtle cell hover - only allowed if cell is empty and game ongoing */
+.tictactoe-board button:hover:not(:disabled) {
+  background: #f0f0f0;
+  box-shadow: 0 1px 4px 0 #b9b8b81c;
+}
 .app {
   min-height: 100vh;
   display: flex;
